@@ -1,0 +1,57 @@
+
+[
+    {
+      "id": "cat-1",
+      "name": "Technology",
+      "slug": "technology",
+      "description": "Gadgets, software development, and modern tech innovations.",
+      "count": 42,
+      "status": "Active",
+      "createdAt": "2026-01-15"
+    },
+    {
+      "id": "cat-2",
+      "name": "Lifestyle",
+      "slug": "lifestyle",
+      "description": "Daily routines, health tips, travel vlogs, and fashion.",
+      "count": 28,
+      "status": "Active",
+      "createdAt": "2026-02-10"
+    },
+    {
+      "id": "cat-3",
+      "name": "Finance",
+      "slug": "finance",
+      "description": "Personal finance, stock market analysis, and crypto updates.",
+      "count": 19,
+      "status": "Active",
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "cat-4",
+      "name": "Education",
+      "slug": "education",
+      "description": "Online learning courses, academic guides, and career counseling.",
+      "count": 35,
+      "status": "Active",
+      "createdAt": "2026-03-24"
+    },
+    {
+      "id": "cat-5",
+      "name": "Entertainment",
+      "slug": "entertainment",
+      "description": "Movie reviews, celebrity gossip, music, and pop culture news.",
+      "count": 0,
+      "status": "Inactive",
+      "createdAt": "2026-04-12"
+    },
+    {
+      "id": "cat-6",
+      "name": "Health & Fitness",
+      "slug": "health-fitness",
+      "description": "Gym workouts, diet plans, mental health, and wellness.",
+      "count": 18,
+      "status": "Active",
+      "createdAt": "2026-05-02"
+    }
+  ]

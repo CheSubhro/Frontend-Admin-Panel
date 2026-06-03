@@ -9,12 +9,14 @@ import AdminLayout from './layouts/AdminLayout'
 import ProtectedRoute from './components/auth/ProtectedRoute' 
 
 // Pages
-import Home from './pages/Home'
+// import Home from './pages/Home'
 import Login from './pages/Login'
-import Signup from './pages/Signup'          
+import Signup from './pages/Signup' 
+import Categories from './pages/Categories'         
 import ForgotPassword from './pages/ForgotPassword'
 import Dashboard from './pages/Dashboard'
 import NotFound from './pages/NotFound' 
+
 
 export default function App() {
     return (
@@ -34,6 +36,7 @@ export default function App() {
                     }>
                         <Route path="/" element={<Navigate to="/admin" replace />} />
                         <Route path="/admin" element={<Dashboard />} />
+                        <Route path="/admin/categories" element={<Categories />} />
                     </Route>
 
                     {/* Catch-all 404 Page */}
