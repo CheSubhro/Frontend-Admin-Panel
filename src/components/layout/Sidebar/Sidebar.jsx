@@ -10,7 +10,7 @@ const Sidebar = () => {
 
     const menuItems = [
         { name: 'Dashboard', path: '/admin', icon: '📊' },
-        { name: 'All Posts', path: '/admin/posts', icon: '📝' },
+        { name: 'Products', path: '/admin/products', icon: '📦' },
         { name: 'Categories', path: '/admin/categories', icon: '📁' },
         { name: 'Users', path: '/admin/users', icon: '👥' },
         { name: 'Settings', path: '/admin/settings', icon: '⚙️' },
@@ -22,10 +22,10 @@ const Sidebar = () => {
             <Box>
                 <HStack spaceX="3" mb="8" align="center">
                     <Box bg="blue.500" p="2" borderRadius="lg" color="white" fontWeight="bold" fontSize="lg">
-                        B✍️
+                        A✍️
                     </Box>
                     <Heading size="md" fontWeight="bold" color="white" letterSpacing="tight">
-                        BlogAdmin
+                        AdminPanel
                     </Heading>
                 </HStack>
 

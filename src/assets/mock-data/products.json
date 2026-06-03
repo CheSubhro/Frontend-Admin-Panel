@@ -1,0 +1,453 @@
+
+[
+    {
+      "id": "prod-1",
+      "name": "Wireless Over-Ear Headphones",
+      "price": 129.99,
+      "category": "Electronics",
+      "stock": 45,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+    },
+    {
+      "id": "prod-2",
+      "name": "Minimalist Leather Watch",
+      "price": 89.50,
+      "category": "Accessories",
+      "stock": 12,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500"
+    },
+    {
+      "id": "prod-3",
+      "name": "Ergonomic Mechanical Keyboard",
+      "price": 159.00,
+      "category": "Electronics",
+      "stock": 28,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500"
+    },
+    {
+      "id": "prod-4",
+      "name": "Organic Matte Skin Cream",
+      "price": 34.00,
+      "category": "Beauty",
+      "stock": 85,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=1000&auto=format&fit=crop"
+    },
+    {
+      "id": "prod-5",
+      "name": "Premium Running Shoes",
+      "price": 110.00,
+      "category": "Fitness",
+      "stock": 0,
+      "status": "Inactive",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+    },
+    {
+      "id": "prod-6",
+      "name": "Stainless Steel Water Bottle",
+      "price": 24.99,
+      "category": "Lifestyle",
+      "stock": 150,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500"
+    },
+    {
+      "id": "prod-7",
+      "name": "Smart Fitness Watch",
+      "price": 199.99,
+      "category": "Electronics",
+      "stock": 64,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500"
+    },
+    {
+      "id": "prod-8",
+      "name": "Leather Travel Backpack",
+      "price": 145.00,
+      "category": "Accessories",
+      "stock": 18,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500"
+    },
+    {
+      "id": "prod-9",
+      "name": "Portable Bluetooth Speaker",
+      "price": 59.99,
+      "category": "Electronics",
+      "stock": 40,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500"
+    },
+    {
+      "id": "prod-10",
+      "name": "Scented Soy Wax Candle",
+      "price": 18.50,
+      "category": "Lifestyle",
+      "stock": 95,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500"
+    },
+    {
+      "id": "prod-11",
+      "name": "Professional DSLR Camera",
+      "price": 899.00,
+      "category": "Electronics",
+      "stock": 8,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500"
+    },
+    {
+      "id": "prod-12",
+      "name": "Classic Denim Jacket",
+      "price": 75.00,
+      "category": "Fashion",
+      "stock": 33,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=500"
+    },
+    {
+      "id": "prod-13",
+      "name": "Wireless Charging Pad",
+      "price": 29.99,
+      "category": "Electronics",
+      "stock": 110,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1622445262799-a47f2679b8a3?q=80&w=1000&auto=format&fit=crop"
+    },
+    {
+      "id": "prod-14",
+      "name": "Polarized Sunglasses",
+      "price": 45.00,
+      "category": "Accessories",
+      "stock": 0,
+      "status": "Inactive",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500"
+    },
+    {
+      "id": "prod-15",
+      "name": "Ceramic Coffee Mug Set",
+      "price": 32.00,
+      "category": "Lifestyle",
+      "stock": 50,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500"
+    },
+    {
+      "id": "prod-16",
+      "name": "Ultra-Wide Gaming Monitor",
+      "price": 349.99,
+      "category": "Electronics",
+      "stock": 15,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500"
+    },
+    {
+      "id": "prod-17",
+      "name": "Natural Face Serum",
+      "price": 42.00,
+      "category": "Beauty",
+      "stock": 70,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500"
+    },
+    {
+      "id": "prod-18",
+      "name": "Yoga Mat with Strap",
+      "price": 38.00,
+      "category": "Fitness",
+      "stock": 42,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=500"
+    },
+    {
+      "id": "prod-19",
+      "name": "Minimalist Desk Mat",
+      "price": 25.50,
+      "category": "Lifestyle",
+      "stock": 120,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1632292224971-0d45778b3202?w=500"
+    },
+    {
+      "id": "prod-20",
+      "name": "Noise Cancelling Earbuds",
+      "price": 179.99,
+      "category": "Electronics",
+      "stock": 55,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500"
+    },
+    {
+      "id": "prod-21",
+      "name": "Leather Bi-Fold Wallet",
+      "price": 49.00,
+      "category": "Accessories",
+      "stock": 60,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500"
+    },
+    {
+      "id": "prod-22",
+      "name": "Premium Matcha Powder",
+      "price": 28.00,
+      "category": "Lifestyle",
+      "stock": 80,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500"
+    },
+    {
+      "id": "prod-23",
+      "name": "Adjustable Dumbbell Set",
+      "price": 249.99,
+      "category": "Fitness",
+      "stock": 10,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1638536532686-d610adfc8e5c?w=500"
+    },
+    {
+      "id": "prod-24",
+      "name": "Unisex Cotton Hoodie",
+      "price": 55.00,
+      "category": "Fashion",
+      "stock": 0,
+      "status": "Inactive",
+      "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500"
+    },
+    {
+      "id": "prod-25",
+      "name": "Smart RGB LED Bulb",
+      "price": 19.99,
+      "category": "Electronics",
+      "stock": 200,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1550525255-cc1c76d93659?w=500"
+    },
+    {
+      "id": "prod-26",
+      "name": "Aromatherapy Diffuser",
+      "price": 36.00,
+      "category": "Lifestyle",
+      "stock": 45,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1602928321679-560bb453f190?w=500"
+    },
+    {
+      "id": "prod-27",
+      "name": "Vertical Ergonomic Mouse",
+      "price": 69.99,
+      "category": "Electronics",
+      "stock": 37,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500"
+    },
+    {
+      "id": "prod-28",
+      "name": "Hydrating Lip Balm Set",
+      "price": 15.00,
+      "category": "Beauty",
+      "stock": 140,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1617897903246-719242758050?w=500"
+    },
+    {
+      "id": "prod-29",
+      "name": "Canvas Messenger Bag",
+      "price": 65.00,
+      "category": "Accessories",
+      "stock": 22,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500"
+    },
+    {
+      "id": "prod-30",
+      "name": "HD Webcam with Ring Light",
+      "price": 79.99,
+      "category": "Electronics",
+      "stock": 50,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1612444530582-fc66183b16f7?w=500"
+    },
+    {
+      "id": "prod-31",
+      "name": "Stainless Steel Espresso Maker",
+      "price": 115.00,
+      "category": "Lifestyle",
+      "stock": 14,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500"
+    },
+    {
+      "id": "prod-32",
+      "name": "High-Density Foam Roller",
+      "price": 22.00,
+      "category": "Fitness",
+      "stock": 65,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1600881333168-2ef49b341f30?w=500"
+    },
+    {
+      "id": "prod-33",
+      "name": "Wool Knit Beanie",
+      "price": 25.00,
+      "category": "Fashion",
+      "stock": 88,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1576871337622-98d48d4aa53e?w=500"
+    },
+    {
+      "id": "prod-34",
+      "name": "Aluminum Laptop Stand",
+      "price": 45.00,
+      "category": "Electronics",
+      "stock": 0,
+      "status": "Inactive",
+      "image": "https://images.unsplash.com/photo-1616440347437-b1c73416efc2?w=500"
+    },
+    {
+      "id": "prod-35",
+      "name": "Clay Face Mask",
+      "price": 29.00,
+      "category": "Beauty",
+      "stock": 90,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=500"
+    },
+    {
+      "id": "prod-36",
+      "name": "Leather Passport Holder",
+      "price": 35.00,
+      "category": "Accessories",
+      "stock": 40,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500"
+    },
+    {
+      "id": "prod-37",
+      "name": "4K Laser Projector",
+      "price": 1299.00,
+      "category": "Electronics",
+      "stock": 5,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=500"
+    },
+    {
+      "id": "prod-38",
+      "name": "Handmade Soy Candle Set",
+      "price": 45.00,
+      "category": "Lifestyle",
+      "stock": 30,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500"
+    },
+    {
+      "id": "prod-39",
+      "name": "Resistance Bands Loop Set",
+      "price": 19.99,
+      "category": "Fitness",
+      "stock": 150,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500"
+    },
+    {
+      "id": "prod-40",
+      "name": "Minimalist Card Holder",
+      "price": 24.00,
+      "category": "Accessories",
+      "stock": 115,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1625996321223-90d5cb9f0e13?w=500"
+    },
+    {
+      "id": "prod-41",
+      "name": "Mechanical Pencil Set",
+      "price": 14.50,
+      "category": "Lifestyle",
+      "stock": 250,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500"
+    },
+    {
+      "id": "prod-42",
+      "name": "Graphene Heated Jacket",
+      "price": 189.00,
+      "category": "Fashion",
+      "stock": 12,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500"
+    },
+    {
+      "id": "prod-43",
+      "name": "Smart Water Plant Pitcher",
+      "price": 39.99,
+      "category": "Lifestyle",
+      "stock": 0,
+      "status": "Inactive",
+      "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500"
+    },
+    {
+      "id": "prod-44",
+      "name": "Electric Sonic Toothbrush",
+      "price": 89.99,
+      "category": "Beauty",
+      "stock": 48,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=500"
+    },
+    {
+      "id": "prod-45",
+      "name": "USB-C Multiport Hub",
+      "price": 49.99,
+      "category": "Electronics",
+      "stock": 73,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=500"
+    },
+    {
+      "id": "prod-46",
+      "name": "Waterproof Sports Duffel",
+      "price": 58.00,
+      "category": "Fitness",
+      "stock": 29,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1512201066735-b5a6c810d651?w=500"
+    },
+    {
+      "id": "prod-47",
+      "name": "Exfoliating Body Scrub",
+      "price": 26.00,
+      "category": "Beauty",
+      "stock": 62,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=500"
+    },
+    {
+      "id": "prod-48",
+      "name": "Leather Desk Desk Blotter",
+      "price": 68.00,
+      "category": "Lifestyle",
+      "stock": 19,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500"
+    },
+    {
+      "id": "prod-49",
+      "name": "Studio Condenser Microphone",
+      "price": 149.00,
+      "category": "Electronics",
+      "stock": 16,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=500"
+    },
+    {
+      "id": "prod-50",
+      "name": "Insulated Travel Mug",
+      "price": 27.50,
+      "category": "Lifestyle",
+      "stock": 105,
+      "status": "Active",
+      "image": "https://images.unsplash.com/photo-1577937927133-66ef06acdf18?w=500"
+    }
+]

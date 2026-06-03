@@ -10,12 +10,14 @@ import ProtectedRoute from './components/auth/ProtectedRoute'
 
 // Pages
 // import Home from './pages/Home'
+import Signup from './pages/Signup'
 import Login from './pages/Login'
-import Signup from './pages/Signup' 
-import Categories from './pages/Categories'         
-import ForgotPassword from './pages/ForgotPassword'
+import ForgotPassword from './pages/ForgotPassword' 
+import Categories from './pages/Categories'
+import Products from './pages/Products'         
 import Dashboard from './pages/Dashboard'
 import NotFound from './pages/NotFound' 
+
 
 
 export default function App() {
@@ -37,6 +39,7 @@ export default function App() {
                         <Route path="/" element={<Navigate to="/admin" replace />} />
                         <Route path="/admin" element={<Dashboard />} />
                         <Route path="/admin/categories" element={<Categories />} />
+                        <Route path="/admin/products" element={<Products />} />
                     </Route>
 
                     {/* Catch-all 404 Page */}
