@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HStack, Button, IconButton, Text } from '@chakra-ui/react';
+import { HStack, Button, IconButton } from '@chakra-ui/react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 /**
@@ -24,7 +24,10 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
                 disabled={currentPage === 1}
                 aria-label="Previous Page"
                 variant="outline"
-            />
+            >
+
+                <FiChevronLeft /> 
+            </IconButton>
 
             {/* Individual Page Number Buttons */}
             {pages.map((page) => (
@@ -46,7 +49,9 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
                 disabled={currentPage === totalPages}
                 aria-label="Next Page"
                 variant="outline"
-            />
+            >
+                <FiChevronRight /> 
+            </IconButton>
         </HStack>
     );
 };
