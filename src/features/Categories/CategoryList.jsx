@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { 
     Box, 
     Table, 
@@ -9,11 +9,12 @@ import {
     Text,
     useDisclosure
 } from '@chakra-ui/react';
-import { FiPlus, FiEdit2, FiTrash2 } from 'react-icons/fi';
+import { FiPlus, FiEdit2, FiTrash2, FiUpload } from 'react-icons/fi';
 import mockCategories from '../../assets/mock-data/categories.json'; // Mock Data
 import { Card, Button, Input, Pagination, Badge, Modal, ConfirmModal } from '../../components/common'; // Common Components
 import { usePagination } from '../../hooks/usePagination'; // Custom Hooks
 import CategoryForm from './CategoryForm'
+import * as XLSX from 'xlsx'; // SheetJS Library Import
 
 const CategoryList = () => {
 
@@ -24,6 +25,8 @@ const CategoryList = () => {
 
     const formModal = useDisclosure();
     const deleteModal = useDisclosure();
+
+    const fileInputRef = useRef(null); // For Excel input
 
     // Search Filter Logic
     const filteredCategories = categories.filter(category =>
@@ -66,6 +69,78 @@ const CategoryList = () => {
         setDeleteId(null);
     };
 
+    // Excel File Handler
+    const handleExcelImport = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+            try {
+                const bstr = evt.target.result;
+                const wb = XLSX.read(bstr, { type: 'binary' });
+                const wsname = wb.SheetNames[0]; 
+                const ws = wb.Sheets[wsname];
+                const rawData = XLSX.utils.sheet_to_json(ws); 
+
+                let skipCount = 0; 
+                const importedCategories = [];
+
+                rawData.forEach((item, index) => {
+                    const name = (item.name || item.Name || 'Unnamed Category').trim();
+                    const slug = (item.slug || item.Slug || name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '')).trim();
+
+                    const isDuplicate = categories.some(
+                        cat => cat.name.toLowerCase() === name.toLowerCase() || 
+                               cat.slug.toLowerCase() === slug.toLowerCase()
+                    );
+
+                    if (isDuplicate) {
+                        skipCount++; 
+                    } else {
+                        importedCategories.push({
+                            id: `cat-excel-${Date.now()}-${index}`,
+                            name: name,
+                            slug: slug,
+                            description: item.description || item.Description || '',
+                            count: parseInt(item.count || item.Count, 10) || 0,
+                            status: (item.status || item.Status) === 'Inactive' ? 'Inactive' : 'Active',
+                            createdAt: item.createdAt || item.CreatedAt || new Date().toISOString().split('T')[0]
+                    });
+                    }
+                });
+
+                if (importedCategories.length === 0) {
+                    if (skipCount > 0) {
+                        alert("All categories in this Excel file already exist! No new data was added.");
+                    } else {
+                        alert("No valid data found in the Excel file.");
+                    }
+                    return;
+                }
+
+                setCategories(prev => [...importedCategories, ...prev]);
+                resetPage(); 
+
+                if (skipCount > 0) {
+                    alert(`${importedCategories.length} new categories imported! (${skipCount} duplicates were skipped).`);
+                } else {
+                    alert(`${importedCategories.length} categories imported successfully!`);
+                }
+
+            } catch (error) {
+                console.error("Excel Parsing Error:", error);
+                alert("Failed to parse Excel file. Please ensure the file format is correct.");
+            } finally {
+                if (fileInputRef.current) fileInputRef.current.value = '';
+            }
+        };
+
+        reader.readAsBinaryString(file);
+    };
+
+    
+
     return (
         <>
             <Box spaceY="6">
@@ -74,16 +149,34 @@ const CategoryList = () => {
                         <Heading size="lg" fontWeight="bold" color="slate.800">Blog Categories</Heading>
                         <Text color="gray.500" fontSize="sm">Manage and organize your blog post domains.</Text>
                     </Box>
-                    <Button 
-                        variant="solid" 
-                        colorScheme="blue" 
-                        onClick={() => {
-                            setSelectedCategory(null); 
-                            formModal.onOpen();
-                        }}
-                    >
-                        <FiPlus style={{ marginRight: '6px' }} /> Add New Category
-                    </Button>
+                    <HStack gap="3">
+                        <input 
+                            type="file"
+                            accept=".xlsx, .xls"
+                            ref={fileInputRef}
+                            style={{ display: 'none' }}
+                            onChange={handleExcelImport}
+                        />
+                        {/* Excel Import Button */}
+                        <Button 
+                            variant="outline" 
+                            colorScheme="teal" 
+                            onClick={() => fileInputRef.current.click()}
+                        >
+                            <FiUpload style={{ marginRight: '6px' }} /> Import Excel
+                        </Button>
+
+                        <Button 
+                            variant="solid" 
+                            colorScheme="blue" 
+                            onClick={() => {
+                                setSelectedCategory(null); 
+                                formModal.onOpen();
+                            }}
+                        >
+                            <FiPlus style={{ marginRight: '6px' }} /> Add New Category
+                        </Button>
+                    </HStack>
                 </Flex>
 
                 {/* Search Bar */}
