@@ -9,7 +9,6 @@ import { Badge as ChakraBadge } from '@chakra-ui/react';
  * @param {string} children - Badge text
  */
 const Badge = ({ status = 'info', children, ...props }) => {
-    // Status onujayi color scheme thik kora
     const colorSchemes = {
         success: 'green',
         error: 'red',

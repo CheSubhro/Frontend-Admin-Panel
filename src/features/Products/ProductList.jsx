@@ -27,20 +27,25 @@ const ProductList = () => {
     const formModal = useDisclosure();
     const deleteModal = useDisclosure();
 
-    // 🔍 Search and Filter Logic (Searches by Name or Category)
-    const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.category.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    // Advanced Search Logic (Searches by Name, SKU, Category, and Tags)
+    const filteredProducts = products.filter(product => {
+        const term = searchTerm.toLowerCase();
+        return (
+            product.name.toLowerCase().includes(term) ||
+            (product.sku && product.sku.toLowerCase().includes(term)) ||
+            product.category.toLowerCase().includes(term) ||
+            (product.tags && product.tags.some(tag => tag.toLowerCase().includes(term)))
+        );
+    });
 
-    // Client-side pagination (Showing 5 products per page for better visibility with images)
+    // Client-side pagination (Showing 10 products per page)
     const { 
         currentPage, 
         totalPages, 
         currentItems: currentProducts, 
         handlePageChange,
         resetPage
-    } = usePagination(filteredProducts, 5);
+    } = usePagination(filteredProducts, 10);
 
     // Create or Edit Handler
     const handleFormSubmit = (formData) => {
@@ -53,6 +58,7 @@ const ProductList = () => {
             // Create Mode
             const newProduct = {
                 id: `prod-${Date.now()}`,
+                createdAt: new Date().toISOString(), // System managed fields
                 ...formData
             };
             setProducts(prev => [newProduct, ...prev]);
@@ -92,7 +98,7 @@ const ProductList = () => {
                 <Card p="4" mb="6">
                     <HStack maxW="md">
                         <Input 
-                            placeholder="Search by product name or category..." 
+                            placeholder="Search by name, SKU, category, or tags..." 
                             value={searchTerm}
                             mb="0"
                             onChange={(e) => {
@@ -116,7 +122,7 @@ const ProductList = () => {
                                 <Table.Header>
                                     <Table.Row bg="gray.50" h="10">
                                         <Table.ColumnHeader p="3" width="80px">Image</Table.ColumnHeader>
-                                        <Table.ColumnHeader p="3">Product Name</Table.ColumnHeader>
+                                        <Table.ColumnHeader p="3">Product Info</Table.ColumnHeader>
                                         <Table.ColumnHeader p="3">Category</Table.ColumnHeader>
                                         <Table.ColumnHeader p="3">Price</Table.ColumnHeader>
                                         <Table.ColumnHeader p="3">Stock</Table.ColumnHeader>
@@ -139,19 +145,47 @@ const ProductList = () => {
                                                     fallbackSrc="https://via.placeholder.com/45"
                                                 />
                                             </Table.Cell>
-                                            <Table.Cell p="3" fontWeight="medium">{product.name}</Table.Cell>
+                                            
+                                            {/* 📦 Product Info (Name & SKU) */}
+                                            <Table.Cell p="3">
+                                                <Box>
+                                                    <Text fontWeight="medium" lineClamp={1}>{product.name}</Text>
+                                                    {product.sku && (
+                                                        <Text fontSize="xs" color="gray.400" fontFamily="mono">
+                                                            {product.sku}
+                                                        </Text>
+                                                    )}
+                                                </Box>
+                                            </Table.Cell>
+                                            
                                             <Table.Cell p="3" color="gray.600">{product.category}</Table.Cell>
-                                            <Table.Cell p="3" fontWeight="semibold">${product.price.toFixed(2)}</Table.Cell>
+                                            
+                                            {/* 💰 Price Display (with compareAtPrice markdown) */}
+                                            <Table.Cell p="3">
+                                                <Box>
+                                                    <Text fontWeight="semibold" color="gray.800">
+                                                        ${product.price.toFixed(2)}
+                                                    </Text>
+                                                    {product.compareAtPrice && product.compareAtPrice > product.price && (
+                                                        <Text fontSize="xs" color="gray.400" textDecoration="line-through">
+                                                            ${product.compareAtPrice.toFixed(2)}
+                                                        </Text>
+                                                    )}
+                                                </Box>
+                                            </Table.Cell>
+                                            
                                             <Table.Cell p="3">
                                                 <Text color={product.stock === 0 ? "red.500" : "gray.700"}>
                                                     {product.stock === 0 ? "Out of Stock" : `${product.stock} units`}
                                                 </Text>
                                             </Table.Cell>
+                                            
                                             <Table.Cell p="3">
                                                 <Badge status={product.status === 'Active' ? 'success' : 'error'}>
                                                     {product.status}
                                                 </Badge>
                                             </Table.Cell>
+                                            
                                             <Table.Cell p="3" textAlign="right">
                                                 <HStack gap="2" justify="flex-end">
                                                     <Button 

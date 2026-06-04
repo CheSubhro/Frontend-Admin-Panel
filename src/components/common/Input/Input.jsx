@@ -5,10 +5,22 @@ import React, { forwardRef } from 'react';
 import { Input as ChakraInput, Field } from '@chakra-ui/react';
 
 
-const Input = forwardRef(({ label, error, helperText, ...props }, ref) => {
+const Input = forwardRef(({ label, error, helperText, onKeyDown, ...props }, ref) => {
+
+    const handleKeyDown = (e) => {
+        if (props.type === 'number') {
+            if (e.key === '-' || e.key === 'e' || e.key === 'E') {
+                e.preventDefault();
+                return;
+            }
+        }
+        if (onKeyDown) {
+            onKeyDown(e);
+        }
+    };
+
     return (
         <Field.Root invalid={!!error} mb="4">
-            
             {label && (
                 <Field.Label fontWeight="600" mb="1">
                     {label}
@@ -19,6 +31,7 @@ const Input = forwardRef(({ label, error, helperText, ...props }, ref) => {
                 ref={ref} 
                 _focus={{ borderColor: "blue.500", boxShadow: "0 0 0 1px #3182ce" }}
                 _invalid={{ borderColor: "red.500", boxShadow: "0 0 0 1px #e53e3e" }}
+                onKeyDown={handleKeyDown} 
                 {...props}
             />
 
@@ -33,7 +46,6 @@ const Input = forwardRef(({ label, error, helperText, ...props }, ref) => {
                     {helperText}
                 </Field.HelperText>
             )}
-            
         </Field.Root>
     );
 });
