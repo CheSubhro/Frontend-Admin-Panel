@@ -1,0 +1,103 @@
+
+[
+    {
+      "id": "cp-1",
+      "code": "FESTIVE20",
+      "discountType": "percentage",
+      "discountValue": 20,
+      "minOrderAmount": 500,
+      "maxDiscount": 200,
+      "expiryDate": "2026-12-31",
+      "isActive": true
+    },
+    {
+      "id": "cp-2",
+      "code": "WELCOME100",
+      "discountType": "flat",
+      "discountValue": 100,
+      "minOrderAmount": 1000,
+      "maxDiscount": 100,
+      "expiryDate": "2026-08-15",
+      "isActive": true
+    },
+    {
+      "id": "cp-3",
+      "code": "EIDSPECIAL",
+      "discountType": "percentage",
+      "discountValue": 15,
+      "minOrderAmount": 300,
+      "maxDiscount": 150,
+      "expiryDate": "2026-05-20",
+      "isActive": false
+    },
+    {
+      "id": "cp-4",
+      "code": "FREESHIP",
+      "discountType": "flat",
+      "discountValue": 50,
+      "minOrderAmount": 200,
+      "maxDiscount": 50,
+      "expiryDate": "2026-09-30",
+      "isActive": true
+    },
+    {
+      "id": "cp-5",
+      "code": "MEGAREBATE",
+      "discountType": "percentage",
+      "discountValue": 35,
+      "minOrderAmount": 2500,
+      "maxDiscount": 1000,
+      "expiryDate": "2026-07-01",
+      "isActive": true
+    },
+    {
+      "id": "cp-6",
+      "code": "MONSOON50",
+      "discountType": "flat",
+      "discountValue": 50,
+      "minOrderAmount": 600,
+      "maxDiscount": 50,
+      "expiryDate": "2026-04-10",
+      "isActive": true
+    },
+    {
+      "id": "cp-7",
+      "code": "FLASHDEAL50",
+      "discountType": "percentage",
+      "discountValue": 50,
+      "minOrderAmount": 1500,
+      "maxDiscount": 500,
+      "expiryDate": "2026-06-15",
+      "isActive": true
+    },
+    {
+      "id": "cp-8",
+      "code": "WEEKENDCONO",
+      "discountType": "flat",
+      "discountValue": 150,
+      "minOrderAmount": 1200,
+      "maxDiscount": 150,
+      "expiryDate": "2026-10-25",
+      "isActive": false
+    },
+    {
+      "id": "cp-9",
+      "code": "APPONLY25",
+      "discountType": "percentage",
+      "discountValue": 25,
+      "minOrderAmount": 800,
+      "maxDiscount": 300,
+      "expiryDate": "2026-11-11",
+      "isActive": true
+    },
+    {
+      "id": "cp-10",
+      "code": "CLEARANCE80",
+      "discountType": "percentage",
+      "discountValue": 80,
+      "minOrderAmount": 5000,
+      "maxDiscount": 2500,
+      "expiryDate": "2026-03-01",
+      "isActive": true
+    }
+  ]
