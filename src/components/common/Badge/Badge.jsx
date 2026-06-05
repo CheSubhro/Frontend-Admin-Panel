@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Badge as ChakraBadge } from '@chakra-ui/react'; // hggh
+import { Badge as ChakraBadge } from '@chakra-ui/react'; 
 
 const Badge = ({ variant, status, children, ...props }) => {
     const rawKey = (variant || status || 'info').toLowerCase();
