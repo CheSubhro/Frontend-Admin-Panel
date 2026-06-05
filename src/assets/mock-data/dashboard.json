@@ -1,0 +1,18 @@
+
+{
+    "metrics": {
+      "totalSales": 12450.00,
+      "activeProducts": 1240,
+      "totalCustomers": 3480,
+      "pendingOrders": 18
+    },
+    "salesHistory": [
+      { "date": "Mon", "sales": 1200, "orders": 15 },
+      { "date": "Tue", "sales": 1900, "orders": 22 },
+      { "date": "Wed", "sales": 1500, "orders": 19 },
+      { "date": "Thu", "sales": 2500, "orders": 32 },
+      { "date": "Fri", "sales": 2200, "orders": 28 },
+      { "date": "Sat", "sales": 3100, "orders": 40 },
+      { "date": "Sun", "sales": 2800, "orders": 35 }
+    ]
+  }
