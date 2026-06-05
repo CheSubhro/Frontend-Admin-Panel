@@ -19,7 +19,7 @@ import Dashboard from './pages/Dashboard'
 import NotFound from './pages/NotFound' 
 import OrdersPage from './pages/OrdersPage'
 import CouponsPage from './pages/CouponsPage'
-
+import UsersPage from './pages/UsersPage'
 
 
 export default function App() {
@@ -44,6 +44,8 @@ export default function App() {
                         <Route path="/admin/products" element={<Products />} />
                         <Route path="/admin/orders" element={<OrdersPage />} />
                         <Route path="/admin/coupons" element={<CouponsPage />} />
+                        <Route path="/admin/users" element={<UsersPage />} />
+
                     </Route>
 
                     {/* Catch-all 404 Page */}

@@ -1,17 +1,39 @@
 
 [
-    {
-      "id": 1,
-      "fullName": "Demo",
-      "email": "demo@example.com",
-      "role": "Admin",
-      "status": "Active"
-    },
-    {
-      "id": 2,
-      "fullName": "DemoEditor",
-      "email": "demoeditor@example.com",
-      "role": "Editor",
-      "status": "Inactive"
-    }
+  {
+    "id": "CUS-1024",
+    "name": "Sourav Das",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100",
+    "email": "sourav.das@example.com",
+    "phone": "+91 98300 12345",
+    "joinDate": "2026-01-15",
+    "totalOrders": 14,
+    "lifetimeSpending": 45200.50,
+    "role": "customer",
+    "status": "Active"
+  },
+  {
+    "id": "USR-5012",
+    "name": "Ananya Sharma",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100",
+    "email": "ananya.s@example.com",
+    "phone": "+91 91633 98765",
+    "joinDate": "2026-02-20",
+    "totalOrders": 0,
+    "lifetimeSpending": 0.00,
+    "role": "moderator",
+    "status": "Active"
+  },
+  {
+    "id": "VND-8841",
+    "name": "Rajesh Kumar",
+    "avatar": "",
+    "email": "rajesh.electronics@example.com",
+    "phone": "+91 80170 55443",
+    "joinDate": "2026-03-01",
+    "totalOrders": 0,
+    "lifetimeSpending": 0.00,
+    "role": "vendor",
+    "status": "Suspended"
+  }
 ]

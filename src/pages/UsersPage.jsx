@@ -1,16 +1,18 @@
 
 import React from 'react';
 import { Box } from '@chakra-ui/react';
-import OrderList from '../features/Orders/OrderList'
+import CustomerList from '../features/Users/CustomerList';
 
-const OrdersPage = () => {
+
+
+const UsersPage = () => {
     return (
         <>
             <Box p={{ base: "4", md: "6" }}>
-                <OrderList />
+                <CustomerList />
             </Box>
         </>
     )
 }
 
-export default OrdersPage
+export default UsersPage

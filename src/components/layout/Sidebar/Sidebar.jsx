@@ -12,7 +12,8 @@ const Sidebar = () => {
         { name: 'Dashboard', path: '/admin', icon: '📈' },   
         { name: 'Categories', path: '/admin/categories', icon: '🗂️' }, 
         { name: 'Products', path: '/admin/products', icon: '📦' },  
-        { name: 'Order', path: '/admin/orders', icon: '🛍️' },       
+        { name: 'Order', path: '/admin/orders', icon: '🛍️' }, 
+        { name: 'Coupons', path: '/admin/coupons', icon: '🏷️' },       
         { name: 'Users', path: '/admin/users', icon: '👥' },       
         { name: 'Settings', path: '/admin/settings', icon: '⚙️' },   
     ];
