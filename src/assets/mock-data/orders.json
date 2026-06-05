@@ -1,0 +1,47 @@
+
+[
+  {
+    "id": "ORD-9843",
+    "customerName": "Sourav Das",
+    "email": "sourav.das@example.com",
+    "date": "2026-06-04T10:30:00.000Z",
+    "totalAmount": 464.97,
+    "paymentStatus": "Paid",
+    "paymentMethod": "UPI (GPay)",
+    "orderStatus": "Pending",
+    "shippingAddress": "Flat 4B, Salt Lake Sector 2, Kolkata, West Bengal - 700091",
+    "items": [
+      { "productId": "prod-1", "name": "Wireless Headphones", "price": 349.99, "quantity": 1 },
+      { "productId": "prod-3", "name": "Stainless Steel Bottle", "price": 24.99, "quantity": 2 }
+    ]
+  },
+  {
+    "id": "ORD-1254",
+    "customerName": "Priya Sharma",
+    "email": "priya.s@example.com",
+    "date": "2026-06-03T15:45:00.000Z",
+    "totalAmount": 189.50,
+    "paymentStatus": "Paid",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "Processing",
+    "shippingAddress": "Apt 102, Hiranandani Gardens, Powai, Mumbai, Maharashtra - 400076",
+    "items": [
+      { "productId": "prod-2", "name": "Ergonomic Office Chair", "price": 189.50, "quantity": 1 }
+    ]
+  },
+  {
+    "id": "ORD-3490",
+    "customerName": "Amit Verma",
+    "email": "amit.verma@example.com",
+    "date": "2026-06-01T08:20:00.000Z",
+    "totalAmount": 102.45,
+    "paymentStatus": "Unpaid",
+    "paymentMethod": "Cash on Delivery",
+    "orderStatus": "Shipped",
+    "shippingAddress": "Block C-3, Greater Kailash 1, New Delhi, Delhi - 110048",
+    "items": [
+      { "productId": "prod-5", "name": "Running Shoes v2", "price": 75.00, "quantity": 1 },
+      { "productId": "prod-6", "name": "Organic Green Tea Pack", "price": 12.45, "quantity": 2 }
+    ]
+  }
+]

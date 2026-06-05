@@ -10,8 +10,9 @@ const Sidebar = () => {
 
     const menuItems = [
         { name: 'Dashboard', path: '/admin', icon: '📊' },
-        { name: 'Products', path: '/admin/products', icon: '📦' },
         { name: 'Categories', path: '/admin/categories', icon: '📁' },
+        { name: 'Products', path: '/admin/products', icon: '📦' },
+        { name: 'Order', path: '/admin/orders', icon: '📁' },
         { name: 'Users', path: '/admin/users', icon: '👥' },
         { name: 'Settings', path: '/admin/settings', icon: '⚙️' },
     ];

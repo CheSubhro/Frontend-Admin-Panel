@@ -17,6 +17,7 @@ import Categories from './pages/Categories'
 import Products from './pages/Products'         
 import Dashboard from './pages/Dashboard'
 import NotFound from './pages/NotFound' 
+import OrdersPage from './pages/OrdersPage'
 
 
 
@@ -40,6 +41,7 @@ export default function App() {
                         <Route path="/admin" element={<Dashboard />} />
                         <Route path="/admin/categories" element={<Categories />} />
                         <Route path="/admin/products" element={<Products />} />
+                        <Route path="/admin/orders" element={<OrdersPage />} />
                     </Route>
 
                     {/* Catch-all 404 Page */}
