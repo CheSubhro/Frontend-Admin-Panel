@@ -39,6 +39,11 @@ src/
 ├── App.jsx             # Application core routing and layout wrapper
 └── main.jsx            # Application entry point & provider tree
 
+
+npm install
+npm run dev
+npm run build
+
 <img width="1366" height="641" alt="screencapture-localhost-5173-admin-users-2026-06-08-10_40_45" src="https://github.com/user-attachments/assets/e60ca032-cd23-4171-8a7f-9f1b4e2f48ba" />
 <img width="1366" height="728" alt="screencapture-localhost-5173-admin-settings-2026-06-08-10_59_21" src="https://github.com/user-attachments/assets/08b9ad27-eb40-4913-bf12-92ae0ef89c54" />
 <img width="1366" height="682" alt="screencapture-localhost-5173-login-2026-06-08-10_34_28" src="https://github.com/user-attachments/assets/316ce262-aba6-4da0-ae85-1acee68f549e" />
@@ -56,12 +61,5 @@ src/
 <img width="1366" height="854" alt="screencapture-localhost-5173-admin-coupons-2026-06-08-10_40_07" src="https://github.com/user-attachments/assets/a05482be-e713-424d-9c92-b712ab366a01" />
 <img width="1366" height="641" alt="screencapture-localhost-5173-admin-coupons-2026-06-08-10_40_22" src="https://github.com/user-attachments/assets/73080e62-44af-493d-a453-62a0164d3563" />
 <img width="1366" height="811" alt="screencapture-localhost-5173-admin-users-2026-06-08-10_40_34" src="https://github.com/user-attachments/assets/c93bbfe6-c580-45a6-a02f-eae5af4f7ff6" />
-
-
-
-
-npm install
-npm run dev
-npm run build
 
 Developed with 💙 by CheSubhro
