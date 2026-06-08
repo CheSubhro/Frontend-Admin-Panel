@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Box, Flex, HStack, Text, Center, Input, Group } from '@chakra-ui/react';
+import { Box, Flex, HStack, Text, Center, Input } from '@chakra-ui/react';
 
 const Navbar = () => {
     const { user } = useSelector((state) => state.auth);

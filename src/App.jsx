@@ -20,6 +20,7 @@ import NotFound from './pages/NotFound'
 import OrdersPage from './pages/OrdersPage'
 import CouponsPage from './pages/CouponsPage'
 import UsersPage from './pages/UsersPage'
+import Settings from './pages/Settings'
 
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
                         <Route path="/admin/orders" element={<OrdersPage />} />
                         <Route path="/admin/coupons" element={<CouponsPage />} />
                         <Route path="/admin/users" element={<UsersPage />} />
+                        <Route path="/admin/settings" element={<Settings />} />
 
                     </Route>
 

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Box, Grid, GridItem, Heading, Text, Flex, HStack, Icon,VStack } from '@chakra-ui/react';
+import { Box, Grid, Heading, Text, Flex, HStack, Icon,VStack } from '@chakra-ui/react';
 import { FiDollarSign, FiShoppingBag, FiUsers, FiAlertCircle, FiArrowUpRight, FiArrowDownRight } from 'react-icons/fi';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
